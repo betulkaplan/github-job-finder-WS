@@ -6,6 +6,7 @@
 
 .App {
   margin: auto;
+  margin-top: 50px;
   width: 50%;
   min-width: 500px;
   display: flex;

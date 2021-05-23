@@ -3,7 +3,7 @@ import './JobCard.css';
 import jobLogo from '../../assets/job-logo.svg';
 
 function JobCard({ job }) {
-  let ID = 'id-' + job.id;
+  const ID = 'id-' + job.id;
   return (
     <div className="job-card">
       <div className="logo">

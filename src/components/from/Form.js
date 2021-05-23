@@ -1,14 +1,24 @@
 import './Form.css';
+import { useRef } from 'react';
 
-function Form() {
+function Form({ newQuery }) {
+  const description = useRef();
+  const location = useRef();
   return (
     <div className="form">
       <form action="">
-        <input type="text" placeholder="Job Description" />
+        <input ref={description} type="text" placeholder="Job Description" />
         <br />
-        <input type="text" placeholder="Location" />
+        <input ref={location} type="text" placeholder="Location" />
         <br />
-        <button type="button">Search</button>
+        <button
+          onClick={() => {
+            newQuery(description.current.value, location.current.value);
+          }}
+          type="button"
+        >
+          Search
+        </button>
       </form>
     </div>
   );
